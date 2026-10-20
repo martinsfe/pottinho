@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pote de ração com três grãos, em branco, dentro da área segura do ícone -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M32,54 L76,54 C76,66 66,74 54,74 C42,74 32,66 32,54 Z" />
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M28,51 L80,51 C81.7,51 83,52.3 83,54 C83,55.7 81.7,57 80,57 L28,57 C26.3,57 25,55.7 25,54 C25,52.3 26.3,51 28,51 Z" />
+    <path android:fillColor="#CFE0FF"
+        android:pathData="M45,46 m-4.5,0 a4.5,4.5 0 1,0 9,0 a4.5,4.5 0 1,0 -9,0" />
+    <path android:fillColor="#CFE0FF"
+        android:pathData="M55,42 m-4.5,0 a4.5,4.5 0 1,0 9,0 a4.5,4.5 0 1,0 -9,0" />
+    <path android:fillColor="#CFE0FF"
+        android:pathData="M64,46.5 m-4.5,0 a4.5,4.5 0 1,0 9,0 a4.5,4.5 0 1,0 -9,0" />
+</vector>

@@ -1,0 +1,41 @@
+plugins {
+    id 'com.android.application'
+}
+
+// Cada build do GitHub ganha um número maior, para o Android aceitar a atualização por cima.
+def buildNumber = (System.getenv("GITHUB_RUN_NUMBER") ?: "1").toInteger()
+
+android {
+    namespace 'com.felipe.potinho'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.felipe.potinho"
+        minSdk 26
+        targetSdk 34
+        versionCode buildNumber
+        versionName "1.${buildNumber}"
+    }
+
+    // Chave fixa: todas as versões são assinadas igual, então atualizar não apaga os dados.
+    signingConfigs {
+        release {
+            storeFile file("potinho.jks")
+            storePassword "potinho123"
+            keyAlias "potinho"
+            keyPassword "potinho123"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
